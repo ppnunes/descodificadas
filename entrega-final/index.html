@@ -12,85 +12,104 @@
             height: 300px;
             margin: 10px;
         }
+        .imagem-fundo {
+            background-image: url("imagem.jpg");
+            color: #fff;
+        }
     </style>
     <!-- Adicionando o CSS do Bootstrap via CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Entrega final do site completo</title>
 </head>
 <body>
-    <!-- Logotipo -->
-    <div>
-        <img src="logo.jpg" alt="Logotipo" class="logo">
-    </div>
 
     <!-- Menu -->
-    <nav>
-        <ul>
-            <li><a href="#">Página Inicial</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Contato</a></li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a href="#" class="navbar-brand">
+            <!-- Logotipo -->
+            <img src="logo.jpg" alt="Logotipo" class="logo">
+        </a>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"><a href="#about" class="nav-link">Sobre</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contato</a></li>
         </ul>
     </nav>
 
     <!-- Título destacado com imagem de fundo -->
     <div>
-        <h1>Entrega final do site completo</h1>
-        <img src="imagem.jpg" alt="Imagem de Fundo" class="imagem rounded mx-auto d-block">
+        <h1 class="imagem-fundo">Entrega final do site completo</h1>
     </div>
 
     <!-- Trecho de texto com plano de fundo colorido -->
-    <div class="text-center" style="background-color: lightblue;">
-        <p>Trecho de texto com plano de fundo colorido</p>
+    <div style="background-color: lightblue;">
+        <div class="blockquote text-right">
+            <p class="lorem lg"></p>
+        </div>
+        <p class="blockquote-footer">Um trecho de texto com plano de fundo colorido, 2023</p>
     </div>
 
     <!-- Botão com link interno ou externo -->
-    <div class="text-center">
-        <a href="https://ideogram.ai/" style="background-color: lightgreen; padding: 10px 20px; text-decoration: none; color: #fff;" >Site legal para gerar Imagens!</a>
+    <div class="jumbotron jumbotron-fluid">
+        <p>Quer gerar imagens usando IA?</p>
+        <a href="https://ideogram.ai/" style="background-color: lightgreen; padding: 10px 20px; text-decoration: none; color: #fff;" >Clique aqui para descobrir</a>
     </div>
 
     <!-- Imagens com descrições -->
-    <div class="text-center">
-        <div>
-            <img src="imagem1.jpg" alt="Imagem 1" class="imagem rounded">
-            <p>Descrição da Imagem 1</p>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4 text-center">
+                <img src="imagem1.jpg" alt="Imagem 1" class="rounded imagem">
+                <p>Exemplo 1 de imagem gerada por IA</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="imagem2.jpg" alt="Imagem 2" class="rounded imagem">
+                <p>Exemplo 2 de imagem gerada por IA</p>
+            </div>
         </div>
-        <div>
-            <img src="imagem2.jpg" alt="Imagem 2" class="imagem rounded">
-            <p>Descrição da Imagem 2</p>
+     </div>
+
+
+    <h3>Mapa e Video</h3>
+    <p>Mas e se você quer ver um video de cachorros, ou saber onde fica a capital do Brasil, essa sessão é pra você!</p>
+    <!-- Vídeo e mapa -->
+     <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ntB7Ipk_9Rw?si=BzEoHVegryuU05pp&amp;controls=0" title="Video para cachorro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <p>Aqui, tem um ótimo video de cachorrinho</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=-49.11987304687501%2C-16.453207666510313%2C-46.82647705078126%2C-15.231189704767242&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=10/-15.8431/-47.9732">Ver mapa ampliado</a></small>
+                <p>Aqui, temos um  mapa, que por padrão estará cntrado na região de Brasília, a capital do Brasil</p>
+            </div>
         </div>
-    </div>
+     </div>
 
-    <!-- Vídeo -->
-    <div class="text-center">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/ntB7Ipk_9Rw?si=BzEoHVegryuU05pp&amp;controls=0" title="Video para cachorro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-
-    <!-- Mapa de localização -->
-    <div class="text-center">
-        <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=-49.11987304687501%2C-16.453207666510313%2C-46.82647705078126%2C-15.231189704767242&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=10/-15.8431/-47.9732">Ver mapa ampliado</a></small>
-    </div>
 
     <!-- Formulário para coletar cadastro -->
     <div class="container-lg">
         <form class="row g-3 align-items-center">
-            <!-- Seus campos de formulário aqui -->
+            <p>Quer saber mais? Faça seu cadastro aqui com a gente!</p>
             <div class="col-md-5">
                 <input type="text" class="form-control" placeholder="First name" aria-label="First name">
               </div>
               <div class="col-md-5">
                 <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
             </div>
-            <button type="submit" class="col-md-3">Enviar</button>
+            <button type="submit" class="col-md-3">Quero saber mais!</button>
         </form>
     </div>
 
     <!-- Rodapé -->
     <footer class="container" style="margin-top: 30px;">
-        <p class="text-end">Criado por Priscila Nunes</p>
+        <p class="text-end">Criado por
+            <a href="https://github.com/ppnunes">Priscila Nunes</a>
+        </p>
     </footer>
 
     <!-- Adicionando os scripts do Bootstrap via CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://ramachandrajr.github.io/lorem-js/lorem-js/lorem.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
 </html>
